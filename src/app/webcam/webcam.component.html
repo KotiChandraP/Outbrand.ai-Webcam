@@ -1,0 +1,17 @@
+<div class="webcam-container">
+    <ngx-webcam #webcam [height]="400" [width]="600" [trigger]="true"></ngx-webcam>
+  
+    <button (click)="startRecording()">Start Recording</button>
+    <button (click)="stopRecording()">Stop Recording</button>
+  </div>
+  
+  <!-- Add a new section for displaying recorded video preview -->
+  <div *ngIf="recordedVideo" class="video-preview-container">
+    <h3>Recorded Video Preview</h3>
+    <video [src]="recordedVideo" controls></video>
+    <div>
+      <button (click)="confirmRecording()">Confirm</button>
+      <button (click)="redoRecording()">Redo</button>
+    </div>
+  </div>
+  

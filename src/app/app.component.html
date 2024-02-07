@@ -6,9 +6,7 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<div>
-  <app-video-recorder></app-video-recorder>
-</div>
+
 
 <style>
   :host {
@@ -231,6 +229,7 @@
       <h1>Hello, {{ title }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
     </div>
+
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
       <div class="pill-group">
@@ -326,6 +325,13 @@
     </div>
   </div>
 </main>
+<router-outlet></router-outlet>
+<!-- Add the below code below the router-outlet -->
+<div>
+  <h2>Video Uploader</h2>
+  <app-video-uploader></app-video-uploader>
+</div>
+
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
