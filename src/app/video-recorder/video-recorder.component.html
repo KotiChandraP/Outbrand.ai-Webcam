@@ -1,0 +1,19 @@
+<div>
+    <webcam
+      *ngIf="showWebcam"
+      [height]="480"
+      [width]="640"
+      [trigger]="triggerObservable"
+      (imageCapture)="handleImage($event)">
+    </webcam>
+  </div>
+  
+  <button (click)="toggleWebcam()">Toggle Webcam</button>
+  
+  <div *ngIf="webcamImage">
+    <img [src]="webcamImage.imageAsDataUrl" [width]="640" [height]="480" />
+  </div>
+  
+  <button (click)="confirmRecording()">Confirm Recording</button>
+  <button (click)="redoRecording()">Redo Recording</button>
+  
